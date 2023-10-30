@@ -13,8 +13,12 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@fontsource/karla": "^5.0.17",
+    "@fontsource/playfair-display": "^5.0.17",
+    "@types/styled-components": "^5.1.29",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.2.0",
