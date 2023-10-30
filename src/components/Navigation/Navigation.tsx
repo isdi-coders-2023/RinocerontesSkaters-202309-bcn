@@ -3,8 +3,8 @@ import NavigationStyled from "./NavigationStyled";
 
 const Navigation = (): React.ReactElement => {
   return (
-    <NavigationStyled>
-      <i>
+    <NavigationStyled className="navigation_bar">
+      <i className="home_logo">
         <NavLink to="/home">
           <svg
             width="48"
