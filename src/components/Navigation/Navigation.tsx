@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
+import NavigationStyled from "./NavigationStyled";
 
 const Navigation = (): React.ReactElement => {
   return (
-    <nav>
+    <NavigationStyled>
       <i>
         <NavLink to="/home">
-          {" "}
           <svg
             width="48"
             height="48"
@@ -20,7 +20,7 @@ const Navigation = (): React.ReactElement => {
           </svg>
         </NavLink>
       </i>
-    </nav>
+    </NavigationStyled>
   );
 };
 
