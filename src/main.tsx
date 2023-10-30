@@ -11,5 +11,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <GlobalStyle />
       <App />
     </ThemeProvider>
-  </React.StrictMode>,,
+  </React.StrictMode>,
 );
