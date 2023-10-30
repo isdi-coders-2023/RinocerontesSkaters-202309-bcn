@@ -8,11 +8,17 @@ declare module "styled-components" {
       secondary: string;
       tertiary: string;
       accent: string;
+      light: string;
+      dark: string;
     };
 
     typography: {
       main: string;
       secondary: string;
+      title_size: string;
+      input_size: string;
+      description_size: string;
+      feedback_size: string;
     };
   }
 }
