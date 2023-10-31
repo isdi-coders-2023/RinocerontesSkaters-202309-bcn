@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderStyled from "./HeaderStyled";
-import NavigationStyled from "../Navigation/NavigationStyled";
+import Navigation from "../Navigation/Navigation";
 
 const Header = (): React.ReactElement => {
   return (
@@ -12,7 +12,7 @@ const Header = (): React.ReactElement => {
         height={90}
         className="logo"
       />
-      <NavigationStyled className="navigation" />
+      <Navigation />
     </HeaderStyled>
   );
 };
