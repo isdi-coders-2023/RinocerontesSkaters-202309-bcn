@@ -1,13 +1,12 @@
 import CharacterList from "../../components/CharacterList/CharacterList";
+import StyledHomePage from "./HomePageStyled";
 
 const HomePage = () => {
   return (
-    <>
+    <StyledHomePage>
       <h1 className="character-title">Characters</h1>
-      <div className="character-list-container">
-        <CharacterList />
-      </div>
-    </>
+      <CharacterList />
+    </StyledHomePage>
   );
 };
 
