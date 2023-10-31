@@ -13,8 +13,8 @@ const mainTheme: DefaultTheme = {
     dark: "#100f0f",
   },
   typography: {
-    main: "Playfair Display",
-    secondary: "Karla",
+    main: "'Playfair Display', sans-serif",
+    secondary: "'Karla', sans-serif",
     titleSize: "3.125rem",
     inputSize: "1.25rem",
     descriptionSize: "1.375rem",
