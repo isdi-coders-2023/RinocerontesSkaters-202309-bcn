@@ -16,6 +16,7 @@
   "dependencies": {
     "@fontsource/karla": "^5.0.17",
     "@fontsource/playfair-display": "^5.0.17",
+    "@types/react-router-dom": "^5.3.3",
     "@testing-library/user-event": "^14.5.1",
     "@types/styled-components": "^5.1.29",
     "react": "^18.2.0",
