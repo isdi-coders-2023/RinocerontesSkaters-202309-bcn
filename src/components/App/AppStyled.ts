@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-const AppStyled = styled.div`
-  padding: 15px 20px;
-`;
+const AppStyled = styled.div``;
 
 export default AppStyled;
