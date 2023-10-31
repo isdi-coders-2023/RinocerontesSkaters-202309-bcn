@@ -6,8 +6,8 @@ const CharacterList = () => {
 
   return (
     <ul>
-      {characters.map(() => (
-        <li className="character-card-container"></li>
+      {characters.map((character) => (
+        <li className="character-card-container" key={character.id}></li>
       ))}
     </ul>
   );
