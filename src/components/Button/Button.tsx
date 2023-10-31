@@ -2,15 +2,15 @@ import { PropsWithChildren } from "react";
 import ButtonStyled from "./ButtonStyled";
 
 interface ButtonProps extends PropsWithChildren {
-  actionOnClick: () => void;
+  actionOnTap: () => void;
 }
 
 const Button = ({
-  actionOnClick,
+  actionOnTap: actionOnTap,
   children,
 }: ButtonProps): React.ReactElement => {
   return (
-    <ButtonStyled className="button" onClick={actionOnClick}>
+    <ButtonStyled className="button" onTouchEnd={actionOnTap}>
       {children}
     </ButtonStyled>
   );
