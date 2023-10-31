@@ -7,7 +7,7 @@ const HeaderStyled = styled.header`
   height: 219px;
   gap: 10px;
   flex-shrink: 0;
-  background: #234442;
+  background: ${({ theme }) => theme.colors.background};
   align-items: center;
   justify-content: space-evenly;
 

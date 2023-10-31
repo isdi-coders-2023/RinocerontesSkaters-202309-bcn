@@ -1,4 +1,5 @@
 import { PropsWithChildren } from "react";
+import ButtonStyled from "./ButtonStyled";
 
 interface ButtonProps extends PropsWithChildren {
   actionOnClick: () => void;
@@ -9,9 +10,9 @@ const Button = ({
   children,
 }: ButtonProps): React.ReactElement => {
   return (
-    <button className="button" onClick={actionOnClick}>
+    <ButtonStyled className="button" onClick={actionOnClick}>
       {children}
-    </button>
+    </ButtonStyled>
   );
 };
 
