@@ -3,14 +3,20 @@ import Navigation from "./Navigation";
 import { BrowserRouter } from "react-router-dom";
 
 describe("Given a Navigation component", () => {
-  describe("When it receives a home icon", () => {
-    test("Then it will show it on screen", () => {
-      const expectedResult = "/home";
+  beforeEach(() => {
+    render(
+      <BrowserRouter>
+        <Navigation />
+      </BrowserRouter>,
+    );
+  });
+  describe("When it receives an image with alt property Home icon", () => {
+    test("Then it should show an image with the same alt property", () => {
+      const expectedText = "Home icon";
 
-      render(<Navigation />, { wrapper: BrowserRouter });
-      const link = screen.getByRole("link");
+      const navigation = screen.getByAltText(expectedText);
 
-      expect(link).toHaveAttribute("href", expectedResult);
+      expect(navigation).toBeInTheDocument();
     });
   });
 });
