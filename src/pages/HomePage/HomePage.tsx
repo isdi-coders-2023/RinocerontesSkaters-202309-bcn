@@ -1,10 +1,13 @@
-import Navigation from "../../components/Navigation/Navigation";
+import CharacterList from "../../components/CharacterList/CharacterList";
 
 const HomePage = () => {
   return (
-    <div>
-      <Navigation />
-    </div>
+    <>
+      <h1 className="character-title">Characters</h1>
+      <div className="character-list-container">
+        <CharacterList />
+      </div>
+    </>
   );
 };
 
