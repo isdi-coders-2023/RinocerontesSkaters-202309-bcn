@@ -1,6 +1,6 @@
 import React from "react";
+import Navigation from "../Navigation/Navigation";
 import HeaderStyled from "./HeaderStyled";
-import NavigationStyled from "../Navigation/NavigationStyled";
 
 const Header = (): React.ReactElement => {
   return (
@@ -8,11 +8,11 @@ const Header = (): React.ReactElement => {
       <img
         src="./public/images/logo.webp"
         alt="Logo of Better call Lau"
-        width={230}
-        height={90}
-        className="logo"
+        width="230"
+        height="90"
+        className="main-header__logo"
       />
-      <NavigationStyled className="navigation" />
+      <Navigation />
     </HeaderStyled>
   );
 };
