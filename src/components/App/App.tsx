@@ -12,11 +12,11 @@ const App = (): React.ReactElement => {
           alt="Logo of Better call Lau"
           className="logo"
         />
-        <Routes>
-          <Route path="/" element={<Navigate to="/home" />} />
-          <Route path="/home" element={<HomePage />} />
-        </Routes>
       </HeaderStyled>
+      <Routes>
+        <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="/home" element={<HomePage />} />
+      </Routes>
     </AppStyled>
   );
 };
