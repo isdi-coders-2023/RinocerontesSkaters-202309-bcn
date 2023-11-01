@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
 const NavigationStyled = styled.nav`
-  padding: 0px 20px;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
 
-  .icon {
+  .container-list {
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+
+    &__icon {
+    }
+
     &__active {
       border-bottom: solid 3px #fef698;
       border-bottom-left-radius: 10px;
