@@ -16,7 +16,6 @@ describe("Given a Header component", () => {
       );
 
       const imageElement = screen.getByAltText("Logo of Better call Lau");
-
       expect(imageElement).toBeInTheDocument();
     });
   });
