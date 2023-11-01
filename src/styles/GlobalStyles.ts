@@ -4,11 +4,11 @@ const GlobalStyle = createGlobalStyle`
   *, 
   ::before, 
   ::after {
-    box-sizing: border-box
+    box-sizing: border-box;
   }
 
   html {
-    font-family: ${({ theme }) => theme.typography.main} 
+    font-family: ${({ theme }) => theme.typography.main};
   }
 
   body {
@@ -32,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer; 
     font: inherit; 
     color: inherit; 
-    background: ${({ theme }) => theme.colors.primary}
+    background: ${({ theme }) => theme.colors.primary};
   }
 
   img {
