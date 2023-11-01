@@ -1,7 +1,13 @@
-import Navigation from "../../components/Navigation/Navigation";
+import CharacterList from "../../components/CharacterList/CharacterList";
+import StyledHomePage from "./HomePageStyled";
 
 const HomePage = () => {
-  return <Navigation />;
+  return (
+    <StyledHomePage>
+      <h1 className="character-title">Characters</h1>
+      <CharacterList />
+    </StyledHomePage>
+  );
 };
 
 export default HomePage;
