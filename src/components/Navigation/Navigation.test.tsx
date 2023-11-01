@@ -10,9 +10,19 @@ describe("Given a Navigation component", () => {
       </BrowserRouter>,
     );
   });
-  describe("When it receives an image with alt property Home icon", () => {
-    test("Then it should show an image with the same alt property", () => {
+  describe("When it is rendered", () => {
+    test("Then it should show an image with an alternative text that says Home icon", () => {
       const expectedText = "Home icon";
+
+      const navigation = screen.getByAltText(expectedText);
+
+      expect(navigation).toBeInTheDocument();
+    });
+  });
+
+  describe("When it is rendered", () => {
+    test("Then it should show an image with an alternative text that says Create icon", () => {
+      const expectedText = "Create icon";
 
       const navigation = screen.getByAltText(expectedText);
 
