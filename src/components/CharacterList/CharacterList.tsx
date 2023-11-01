@@ -1,11 +1,8 @@
-import { useContext } from "react";
-import CharactersContext from "../../features/characters/store/CharactersContext";
+import { characters } from "../../mocks/CharactersMock";
 
 const CharacterList = () => {
-  const { characters } = useContext(CharactersContext);
-
   return (
-    <ul>
+    <ul className="character-list">
       {characters.map((character) => (
         <li className="character-card-container" key={character.id}></li>
       ))}
