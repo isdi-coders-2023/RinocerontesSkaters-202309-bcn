@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
 import CharacterList from "./CharacterList";
-
 import CharactersProviderWrapper from "../../features/characters/store/CharactersProviderWrapper";
 
 describe("Given a CharacterList", () => {
