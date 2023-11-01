@@ -10,8 +10,9 @@ describe("Given a Header component", () => {
       </BrowserRouter>,
     );
   });
-  describe("When the project's App.tsx file renders its content", () => {
-    test("Then it should show in the HTML file", () => {
+  describe("When it is rendered", () => {
+    test("Then it should show an image with an alternative text in the HTML file", () => {
+      render(<Header />, { wrapper: BrowserRouter });
       const imageElement = screen.getByAltText("Logo of Better call Lau");
 
       expect(imageElement).toBeInTheDocument();
