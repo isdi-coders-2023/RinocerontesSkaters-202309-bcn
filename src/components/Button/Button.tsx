@@ -4,6 +4,7 @@ import ButtonStyled from "./ButtonStyled";
 interface ButtonProps extends PropsWithChildren {
   actionOnTap: () => void;
   disabled: boolean;
+  text: string;
 }
 
 const Button = ({
@@ -11,7 +12,7 @@ const Button = ({
   children,
 }: ButtonProps): React.ReactElement => {
   return (
-    <ButtonStyled className="button" onTouchEnd={actionOnTap}>
+    <ButtonStyled className="button" onTouchEnd={actionOnTap} disabled>
       {children}
     </ButtonStyled>
   );
