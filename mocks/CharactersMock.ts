@@ -1,4 +1,4 @@
-import CharacterStructure from "../features/characters/types";
+import CharacterStructure from "../src/features/characters/types";
 
 export const charactersMock: CharacterStructure[] = [
   {

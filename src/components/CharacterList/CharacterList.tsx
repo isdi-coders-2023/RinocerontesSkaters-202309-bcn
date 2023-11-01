@@ -1,6 +1,6 @@
 import CharactersContext from "../../features/characters/store/CharactersContext";
 import { useContext, useEffect } from "react";
-import { charactersMock } from "../../mocks/charactersMock";
+import { charactersMock } from "../../../mocks/CharactersMock";
 
 const CharacterList = () => {
   const { characters, loadCharacters } = useContext(CharactersContext);
