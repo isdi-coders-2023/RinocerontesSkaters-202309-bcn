@@ -3,6 +3,7 @@ import "@testing-library/jest-dom";
 import HomePage from "./HomePage";
 import { ThemeProvider } from "styled-components";
 import mainTheme from "../../styles/mainTheme";
+import CharactersProviderWrapper from "../../features/characters/store/CharactersProviderWrapper";
 
 describe("Given a Home page", () => {
   describe("When it is rendered", () => {
@@ -10,9 +11,11 @@ describe("Given a Home page", () => {
       const headingText = "Characters";
 
       render(
-        <ThemeProvider theme={mainTheme}>
-          <HomePage />
-        </ThemeProvider>,
+        <CharactersProviderWrapper>
+          <ThemeProvider theme={mainTheme}>
+            <HomePage />
+          </ThemeProvider>
+        </CharactersProviderWrapper>,
       );
 
       const heading = screen.getByRole("heading", {
