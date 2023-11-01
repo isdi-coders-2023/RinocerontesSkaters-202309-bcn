@@ -1,7 +1,5 @@
-import Navigation from "../../components/Navigation/Navigation";
-
 const HomePage = () => {
-  return <Navigation />;
+  return <h1 className="character-title">Characters</h1>;
 };
 
 export default HomePage;
