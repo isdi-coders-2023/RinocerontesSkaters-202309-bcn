@@ -4,11 +4,11 @@ const GlobalStyle = createGlobalStyle`
   *, 
   ::before, 
   ::after {
-    box-sizing: border-box
+    box-sizing: border-box;
   }
 
   html {
-    font-family: ${({ theme }) => theme.typography.main} 
+    font-family: ${({ theme }) => theme.typography.main}; 
   }
 
   body,
@@ -19,10 +19,10 @@ const GlobalStyle = createGlobalStyle`
   
   }
 
-  dl, dd {
-    margin: 0; 
-    padding: 0;
-  }
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  } 
+
 
   ul, li {
     list-style: none; 
@@ -34,7 +34,7 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer; 
     font: inherit; 
     color: inherit; 
-    background: ${({ theme }) => theme.colors.primary}
+    background: ${({ theme }) => theme.colors.primary};
   }
 
   img {
