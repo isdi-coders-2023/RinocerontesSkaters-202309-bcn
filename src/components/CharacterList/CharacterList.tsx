@@ -1,6 +1,6 @@
 import CharactersContext from "../../features/characters/store/CharactersContext";
 import { useContext, useEffect } from "react";
-import { charactersMock } from "../../mocks/CharactersMock";
+import { charactersMock } from "../../mocks/charactersMock";
 
 const CharacterList = () => {
   const { characters, loadCharacters } = useContext(CharactersContext);
@@ -12,9 +12,7 @@ const CharacterList = () => {
   return (
     <ul className="character-list">
       {characters.map((character) => (
-        <li className="character-card-container" key={character.id}>
-          {character.appearance}
-        </li>
+        <li className="character-card-container" key={character.id}></li>
       ))}
     </ul>
   );
