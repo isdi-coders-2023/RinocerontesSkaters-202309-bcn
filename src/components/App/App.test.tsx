@@ -3,6 +3,7 @@ import App from "./App";
 import { render, screen } from "@testing-library/react";
 import { ThemeProvider } from "styled-components";
 import mainTheme from "../../styles/mainTheme";
+import CharactersProviderWrapper from "../../features/characters/store/CharactersProviderWrapper";
 
 describe("Given the App component", () => {
   describe("When it receives an image with alt property `Logo of Better call Lau`", () => {
@@ -11,9 +12,11 @@ describe("Given the App component", () => {
 
       render(
         <ThemeProvider theme={mainTheme}>
-          <BrowserRouter>
-            <App />
-          </BrowserRouter>
+          <CharactersProviderWrapper>
+            <BrowserRouter>
+              <App />
+            </BrowserRouter>
+          </CharactersProviderWrapper>
         </ThemeProvider>,
       );
 
