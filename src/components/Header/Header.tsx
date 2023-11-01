@@ -6,7 +6,7 @@ const Header = (): React.ReactElement => {
   return (
     <HeaderStyled className="main-header">
       <img
-        src="./public/images/logo.webp"
+        src="/images/logo.webp"
         alt="Logo of Better call Lau"
         width="230"
         height="90"
