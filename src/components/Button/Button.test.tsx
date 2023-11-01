@@ -22,7 +22,7 @@ describe("Given a Button component", () => {
         </ThemeProvider>,
       );
 
-      const button = screen.getByRole("button");
+      const button = screen.getByRole("button", { name: text });
 
       expect(button).toBeInTheDocument();
     });
