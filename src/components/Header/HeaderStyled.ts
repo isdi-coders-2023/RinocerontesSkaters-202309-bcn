@@ -15,12 +15,7 @@ const HeaderStyled = styled.header`
     height: 90.47px;
     transform: rotate(-5deg);
     flex-shrink: 0;
-  }
-
-  .navigation {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    margin-top: 20px;
   }
 `;
 
