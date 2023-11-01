@@ -1,4 +1,4 @@
-import CharacterStructure from "../src/features/characters/types";
+import CharacterStructure from "../features/characters/types";
 
 export const characters: CharacterStructure[] = [
   {

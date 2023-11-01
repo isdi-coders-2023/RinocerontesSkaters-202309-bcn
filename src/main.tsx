@@ -6,6 +6,9 @@ import GlobalStyle from "./styles/GlobalStyles";
 import App from "./components/App/App";
 import { BrowserRouter } from "react-router-dom";
 import CharactersProviderWrapper from "./features/characters/store/CharactersProviderWrapper";
+import { server } from "./mocks/node";
+
+server.listen();
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
