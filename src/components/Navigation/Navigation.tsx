@@ -19,7 +19,7 @@ const Navigation = (): React.ReactElement => {
               alt="Home icon"
               width="48"
               height="48"
-            ></img>
+            />
           </NavLink>
         </li>
         <li className="container-list__icon">
@@ -34,7 +34,7 @@ const Navigation = (): React.ReactElement => {
               alt="Create icon"
               width="48"
               height="48"
-            ></img>
+            />
           </NavLink>
         </li>
       </ul>
