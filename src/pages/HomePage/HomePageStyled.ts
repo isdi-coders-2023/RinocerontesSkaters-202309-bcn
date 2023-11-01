@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledHomePage = styled.div`
+const StyledHomePage = styled.section`
   background-color: ${({ theme }) => theme.colors.background};
 
   .character-title {
