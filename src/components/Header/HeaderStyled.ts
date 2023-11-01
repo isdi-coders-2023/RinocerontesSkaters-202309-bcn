@@ -10,7 +10,7 @@ const HeaderStyled = styled.header`
   align-items: center;
   justify-content: space-evenly;
 
-  .logo {
+  .main-header__logo {
     width: 230.7px;
     height: 90.47px;
     transform: rotate(-5deg);
