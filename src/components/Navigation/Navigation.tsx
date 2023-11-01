@@ -1,6 +1,5 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import NavigationStyled from "./NavigationStyled";
-import { useLocation } from "react-router-dom";
 
 const Navigation = (): React.ReactElement => {
   const { pathname } = useLocation();
