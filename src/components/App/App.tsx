@@ -7,7 +7,6 @@ const App = (): React.ReactElement => {
   return (
     <AppStyled className="container">
       <Header />
-
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<HomePage />} />

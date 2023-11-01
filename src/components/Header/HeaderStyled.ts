@@ -3,7 +3,6 @@ import styled from "styled-components";
 const HeaderStyled = styled.header`
   display: flex;
   flex-direction: column;
-  width: 390px;
   height: 219px;
   gap: 10px;
   flex-shrink: 0;
