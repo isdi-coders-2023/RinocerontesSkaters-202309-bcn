@@ -1,4 +1,4 @@
-import { characters } from "../../mocks/CharactersMock";
+import { characters } from "../../mocks/charactersMock";
 
 const CharacterList = () => {
   return (
