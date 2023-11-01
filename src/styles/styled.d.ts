@@ -11,7 +11,6 @@ declare module "styled-components" {
       light: string;
       dark: string;
     };
-
     typography: {
       main: string;
       secondary: string;

@@ -15,7 +15,7 @@ const Navigation = (): React.ReactElement => {
           alt="Home icon"
           width="48"
           height="48"
-        ></img>
+        />
       </NavLink>
 
       <NavLink
@@ -27,7 +27,7 @@ const Navigation = (): React.ReactElement => {
           alt="Create icon"
           width="48"
           height="48"
-        ></img>
+        />
       </NavLink>
     </NavigationStyled>
   );
