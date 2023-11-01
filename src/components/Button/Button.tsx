@@ -8,12 +8,17 @@ interface ButtonProps extends PropsWithChildren {
 }
 
 const Button = ({
-  actionOnTap: actionOnTap,
-  children,
+  actionOnTap,
+  disabled,
+  text,
 }: ButtonProps): React.ReactElement => {
   return (
-    <ButtonStyled className="button" onTouchEnd={actionOnTap} disabled>
-      {children}
+    <ButtonStyled
+      className="button"
+      onTouchEnd={actionOnTap}
+      disabled={disabled}
+    >
+      {text}
     </ButtonStyled>
   );
 };
