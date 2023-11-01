@@ -4,10 +4,6 @@ import Button from "./Button";
 import { ThemeProvider } from "styled-components";
 import mainTheme from "../../styles/mainTheme";
 
-beforeEach(() => {
-  vi.resetAllMocks();
-});
-
 describe("Given a Button component", () => {
   const text = "Modify";
   const actionOnTap = vi.fn();

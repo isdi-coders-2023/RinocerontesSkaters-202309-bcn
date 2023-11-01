@@ -1,6 +1,14 @@
-import { characters } from "../../../mocks/CharactersMock";
+import CharactersContext from "../../features/characters/store/CharactersContext";
+import { useContext, useEffect } from "react";
+import { charactersList } from "../../data/charactersList";
 
 const CharacterList = () => {
+  const { characters, loadCharacters } = useContext(CharactersContext);
+
+  useEffect(() => {
+    loadCharacters(charactersList);
+  }, [loadCharacters]);
+
   return (
     <ul className="character-list">
       {characters.map((character) => (

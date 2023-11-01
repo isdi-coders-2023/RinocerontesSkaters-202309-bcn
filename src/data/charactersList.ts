@@ -1,6 +1,6 @@
-import CharacterStructure from "../src/features/characters/types";
+import CharacterStructure from "../features/characters/types";
 
-export const characters: CharacterStructure[] = [
+export const charactersList: CharacterStructure[] = [
   {
     id: 1,
     hash: "6367c33e64f544038d8d9582",
