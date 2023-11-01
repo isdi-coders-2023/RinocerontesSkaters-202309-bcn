@@ -12,7 +12,7 @@ const Navigation = (): React.ReactElement => {
         to={"/home"}
       >
         <img
-          src="/public/images/vector-home.svg"
+          src="/images/vector-home.svg"
           alt="Home icon"
           width="48"
           height="48"
@@ -24,7 +24,7 @@ const Navigation = (): React.ReactElement => {
         to={"/home"}
       >
         <img
-          src="/public/images/vector-add.svg"
+          src="/images/vector-add.svg"
           alt="Create icon"
           width="48"
           height="48"
