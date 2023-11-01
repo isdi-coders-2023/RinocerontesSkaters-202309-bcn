@@ -3,6 +3,7 @@ import ButtonStyled from "./ButtonStyled";
 
 interface ButtonProps extends PropsWithChildren {
   actionOnTap: () => void;
+  disabled: boolean;
 }
 
 const Button = ({
