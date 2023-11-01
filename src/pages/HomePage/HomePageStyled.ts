@@ -6,7 +6,7 @@ const StyledHomePage = styled.div`
   .character-title {
     text-align: center;
     font-size: ${({ theme }) => theme.typography.titleSize};
-    padding: 20px 0 25px;
+    padding: 20px 0 25px 0;
   }
 `;
 
