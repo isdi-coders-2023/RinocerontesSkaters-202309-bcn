@@ -11,7 +11,9 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${({ theme }) => theme.typography.main}; 
   }
 
-  body {
+  body,
+  h1,
+  h2 {
     margin: 0;
     font-size: ${({ theme }) => theme.typography.inputSize};
   
