@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://rinocerontes-skaters-202309-bcn.netlify.app/
