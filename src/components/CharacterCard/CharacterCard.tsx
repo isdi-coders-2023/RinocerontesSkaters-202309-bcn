@@ -1,25 +1,26 @@
 import CharacterStructure from "../../features/characters/types";
+import CharacterCardStyled from "./CharacterCardStyled";
 
 interface CharacterProps {
   character: CharacterStructure;
 }
 
 const CharacterCard = ({
-  character: { img, name },
+  character: { image, name },
 }: CharacterProps): React.ReactElement => {
   return (
-    <article className="card">
-      <div className="">
+    <CharacterCardStyled>
+      <div className="card">
         <img
           className="card__image"
-          src={img}
+          src={image}
           alt={name}
           width="300"
           height="470"
         />
-        <h2>{name}</h2>
+        <h2 className="card__title">{name}</h2>
       </div>
-    </article>
+    </CharacterCardStyled>
   );
 };
 
