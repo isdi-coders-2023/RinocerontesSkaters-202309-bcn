@@ -1,32 +1,62 @@
 import { render, screen } from "@testing-library/react";
 import Navigation from "./Navigation";
-import { BrowserRouter } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+import mainTheme from "../../styles/mainTheme";
 
 describe("Given a Navigation component", () => {
-  beforeEach(() => {
-    render(
-      <BrowserRouter>
-        <Navigation />
-      </BrowserRouter>,
-    );
-  });
   describe("When it is rendered", () => {
     test("Then it should show an image with an alternative text that says Home icon", () => {
+      render(
+        <ThemeProvider theme={mainTheme}>
+          <MemoryRouter>
+            <Navigation />
+          </MemoryRouter>
+        </ThemeProvider>,
+      );
+
       const expectedText = "Home icon";
 
-      const navigation = screen.getByAltText(expectedText);
+      const navigationAltText = screen.getByAltText(expectedText);
 
-      expect(navigation).toBeInTheDocument();
+      expect(navigationAltText).toBeInTheDocument();
     });
   });
 
   describe("When it is rendered", () => {
     test("Then it should show an image with an alternative text that says Create icon", () => {
+      render(
+        <ThemeProvider theme={mainTheme}>
+          <MemoryRouter>
+            <Navigation />
+          </MemoryRouter>
+        </ThemeProvider>,
+      );
+
       const expectedText = "Create icon";
 
-      const navigation = screen.getByAltText(expectedText);
+      const navigationAltText = screen.getByAltText(expectedText);
 
-      expect(navigation).toBeInTheDocument();
+      expect(navigationAltText).toBeInTheDocument();
+    });
+  });
+
+  describe("When it is rendered andwe are at path `/home`", () => {
+    test("Then it should show the class `container-list__active`", () => {
+      const expectedAltText = "Home icon";
+      const expectedClassName = "container-list__active";
+
+      render(
+        <MemoryRouter initialEntries={[{ pathname: "/home" }]}>
+          <ThemeProvider theme={mainTheme}>
+            <Navigation />
+          </ThemeProvider>
+        </MemoryRouter>,
+      );
+
+      const navigationAltText = screen.getByAltText(expectedAltText);
+
+      expect(navigationAltText).toHaveClass(expectedClassName);
     });
   });
 });
