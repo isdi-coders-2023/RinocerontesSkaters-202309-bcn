@@ -12,7 +12,7 @@ const NavigationStyled = styled.nav`
     }
 
     &__active {
-      border-bottom: solid 3px #fef698;
+      border-bottom: solid 3px ${({ theme }) => theme.colors.yellow};
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
       padding-bottom: 2px;

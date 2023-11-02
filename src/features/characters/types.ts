@@ -4,7 +4,7 @@ interface CharacterStructure {
   name: string;
   birthday: string;
   occupation: string[];
-  img: string;
+  image: string;
   status: string;
   appearance: number[];
   firstAppearance: string;

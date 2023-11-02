@@ -1,6 +1,7 @@
 import { useContext, useMemo } from "react";
 import CharactersContext from "../../features/characters/store/CharactersContext";
 import useCharactersApi from "../../hooks/characterApi";
+import CharacterCard from "../CharacterCard/CharacterCard";
 
 const CharacterList = () => {
   const { characters, loadCharacters } = useContext(CharactersContext);
@@ -16,7 +17,7 @@ const CharacterList = () => {
     <ul className="character-list">
       {characters.map((character) => (
         <li className="character-card-container" key={character.id}>
-          {character.birthday}
+          <CharacterCard character={character} />
         </li>
       ))}
     </ul>

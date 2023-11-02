@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 import { fireEvent, render, screen } from "@testing-library/react";
 import Button from "./Button";
 import { ThemeProvider } from "styled-components";
@@ -12,7 +12,7 @@ describe("Given a Button component", () => {
     test("Then it should show a button with the text 'Modify' inside", async () => {
       render(
         <ThemeProvider theme={mainTheme}>
-          <BrowserRouter>
+          <MemoryRouter>
             <Button
               onClick={actionOnClick}
               disabled={false}
@@ -20,7 +20,7 @@ describe("Given a Button component", () => {
               type="submit"
               classModifier=""
             />
-          </BrowserRouter>
+          </MemoryRouter>
         </ThemeProvider>,
       );
 
@@ -34,7 +34,7 @@ describe("Given a Button component", () => {
     test("Then it should render a disabled button", () => {
       render(
         <ThemeProvider theme={mainTheme}>
-          <BrowserRouter>
+          <MemoryRouter>
             <Button
               onClick={actionOnClick}
               disabled={true}
@@ -42,7 +42,7 @@ describe("Given a Button component", () => {
               type="submit"
               classModifier=""
             />
-          </BrowserRouter>
+          </MemoryRouter>
         </ThemeProvider>,
       );
 
@@ -56,7 +56,7 @@ describe("Given a Button component", () => {
     test("Then it should call the 'onClick' function when clicked", () => {
       render(
         <ThemeProvider theme={mainTheme}>
-          <BrowserRouter>
+          <MemoryRouter>
             <Button
               onClick={actionOnClick}
               disabled={false}
@@ -64,7 +64,7 @@ describe("Given a Button component", () => {
               type="submit"
               classModifier=""
             />
-          </BrowserRouter>
+          </MemoryRouter>
         </ThemeProvider>,
       );
 
