@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const StyledHomePage = styled.section`
   background-color: ${({ theme }) => theme.colors.background};
-  height: 100vh;
 
   .character-title {
     text-align: center;

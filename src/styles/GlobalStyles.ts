@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
   h2 {
     margin: 0;
     font-size: ${({ theme }) => theme.typography.inputSize};
-  
+  background-color: ${({ theme }) => theme.colors.background};
   }
 
   h1, h2, h3, h4, h5, h6 {
