@@ -1,6 +1,6 @@
 import CharacterStructure from "../features/characters/types";
 
-export const charactersList: CharacterStructure[] = [
+export const characters: CharacterStructure[] = [
   {
     id: 1,
     hash: "6367c33e64f544038d8d9582",
@@ -10,7 +10,8 @@ export const charactersList: CharacterStructure[] = [
       "Mailroom clerk at Hamlin, Hamlin & McGill",
       "Public Defense Attorney",
     ],
-    img: "https://static.wikia.nocookie.net/breakingbad/images/8/8e/BCS_S6_Portrait_Jimmy.jpg/revision/latest?cb=20220802210840",
+    image:
+      "https://cdn.discordapp.com/attachments/1162111119914188901/1169626363280498718/BCS_S6_Portrait_Jimmy.webp?ex=6556166f&is=6543a16f&hm=0318acdbe7203102162223d4c331645a2b4c27c9b1a6baf5ac8a420e172f721c&",
     status: "Alive",
     appearance: [1, 2, 3, 4, 5, 6],
     firstAppearance: "Uno",
@@ -28,7 +29,8 @@ export const charactersList: CharacterStructure[] = [
       "Private Investigator",
       "Ticket Booth Guard",
     ],
-    img: "https://static.wikia.nocookie.net/breakingbad/images/4/46/BCS_S6_Portrait_Mike.jpg/revision/latest?cb=20220522174959",
+    image:
+      "https://cdn.discordapp.com/attachments/1162111119914188901/1169626569715757137/BCS_S6_Portrait_Mike_1.webp?ex=655616a0&is=6543a1a0&hm=c6053ce891143a99d97c1bcca168804a7d045372c05fddfe7a0fb2607370943d&",
     status: "Deceased",
     appearance: [1, 2, 3, 4, 5, 6],
     firstAppearance: "Uno",

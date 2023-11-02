@@ -1,14 +1,20 @@
-import { useContext } from "react";
 import CharactersContext from "../../features/characters/store/CharactersContext";
+import { useContext, useEffect } from "react";
+import { characters } from "../../data/characters";
+import CharacterCard from "../CharacterCard/CharacterCard";
 
 const CharacterList = () => {
-  const { characters } = useContext(CharactersContext);
+  const { loadCharacters } = useContext(CharactersContext);
+
+  useEffect(() => {
+    loadCharacters(characters);
+  }, [loadCharacters]);
 
   return (
     <ul className="character-list">
       {characters.map((character) => (
         <li className="character-card-container" key={character.id}>
-          {character.birthday}
+          <CharacterCard character={character} />
         </li>
       ))}
     </ul>
