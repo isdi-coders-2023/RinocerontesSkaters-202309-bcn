@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 import App from "./App";
 import { render, screen } from "@testing-library/react";
 import { ThemeProvider } from "styled-components";
@@ -13,16 +13,16 @@ describe("Given the App component", () => {
       render(
         <ThemeProvider theme={mainTheme}>
           <CharactersProviderWrapper>
-            <BrowserRouter>
+            <MemoryRouter>
               <App />
-            </BrowserRouter>
+            </MemoryRouter>
           </CharactersProviderWrapper>
         </ThemeProvider>,
       );
 
-      const headderLogoAccesibility = screen.getByAltText(expectedText);
+      const headerLogoAccesibility = screen.getByAltText(expectedText);
 
-      expect(headderLogoAccesibility).toBeInTheDocument();
+      expect(headerLogoAccesibility).toBeInTheDocument();
     });
   });
 });

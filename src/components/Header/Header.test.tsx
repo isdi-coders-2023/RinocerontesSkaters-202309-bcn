@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import Header from "./Header";
-import { BrowserRouter } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import mainTheme from "../../styles/mainTheme";
 
@@ -11,9 +11,9 @@ describe("Given a Header component", () => {
 
       render(
         <ThemeProvider theme={mainTheme}>
-          <BrowserRouter>
+          <MemoryRouter>
             <Header />
-          </BrowserRouter>
+          </MemoryRouter>
         </ThemeProvider>,
       );
 
