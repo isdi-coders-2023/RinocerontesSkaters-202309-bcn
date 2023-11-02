@@ -6,8 +6,8 @@ import Loading from "../Loading/Loading";
 const App = (): React.ReactElement => {
   return (
     <div className="container">
-      <Header />
       <Loading />
+      <Header />
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<HomePage />} />
