@@ -2,20 +2,25 @@ import { PropsWithChildren } from "react";
 import ButtonStyled from "./ButtonStyled";
 
 interface ButtonProps extends PropsWithChildren {
-  actionOnTap: () => void;
+  type: "button" | "submit";
+  classModifier: string;
+  onClick: () => void;
   disabled: boolean;
   text: string;
 }
 
 const Button = ({
-  actionOnTap,
+  type,
+  classModifier,
+  onClick: actionOnClick,
   disabled,
   text,
 }: ButtonProps): React.ReactElement => {
   return (
     <ButtonStyled
-      className="button"
-      onTouchEnd={actionOnTap}
+      className={`button ${classModifier}`}
+      type={type}
+      onClick={actionOnClick}
       disabled={disabled}
     >
       {text}

@@ -1,19 +1,25 @@
 import { BrowserRouter } from "react-router-dom";
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import Button from "./Button";
 import { ThemeProvider } from "styled-components";
 import mainTheme from "../../styles/mainTheme";
 
 describe("Given a Button component", () => {
   const text = "Modify";
-  const actionOnTap = vi.fn();
+  const actionOnClick = vi.fn();
 
   describe("When it receives a text 'Modify'", () => {
-    test("Then it should show a button with 'Modify' inside", async () => {
+    test("Then it should show a button with the text 'Modify' inside", async () => {
       render(
         <ThemeProvider theme={mainTheme}>
           <BrowserRouter>
-            <Button actionOnTap={actionOnTap} disabled={false} text={text} />
+            <Button
+              onClick={actionOnClick}
+              disabled={false}
+              text={text}
+              type="submit"
+              classModifier=""
+            />
           </BrowserRouter>
         </ThemeProvider>,
       );
@@ -29,7 +35,13 @@ describe("Given a Button component", () => {
       render(
         <ThemeProvider theme={mainTheme}>
           <BrowserRouter>
-            <Button actionOnTap={actionOnTap} disabled={true} text="Modify" />
+            <Button
+              onClick={actionOnClick}
+              disabled={true}
+              text="Modify"
+              type="submit"
+              classModifier=""
+            />
           </BrowserRouter>
         </ThemeProvider>,
       );
@@ -37,6 +49,30 @@ describe("Given a Button component", () => {
       const button = screen.getByRole("button");
 
       expect(button).toBeDisabled();
+    });
+  });
+
+  describe("When it receives an 'onClick' handler", () => {
+    test("Then it should call the 'onClick' function when clicked", () => {
+      render(
+        <ThemeProvider theme={mainTheme}>
+          <BrowserRouter>
+            <Button
+              onClick={actionOnClick}
+              disabled={false}
+              text={text}
+              type="submit"
+              classModifier=""
+            />
+          </BrowserRouter>
+        </ThemeProvider>,
+      );
+
+      const button = screen.getByRole("button", { name: text });
+
+      fireEvent.click(button);
+
+      expect(actionOnClick).toHaveBeenCalledTimes(1);
     });
   });
 });
