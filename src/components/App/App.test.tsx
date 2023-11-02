@@ -20,9 +20,9 @@ describe("Given the App component", () => {
         </ThemeProvider>,
       );
 
-      const headderLogoAccesibility = screen.getByAltText(expectedText);
+      const headerLogoAccesibility = screen.getByAltText(expectedText);
 
-      expect(headderLogoAccesibility).toBeInTheDocument();
+      expect(headerLogoAccesibility).toBeInTheDocument();
     });
   });
 });
