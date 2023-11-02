@@ -8,13 +8,11 @@ const Navigation = (): React.ReactElement => {
     <NavigationStyled>
       <ul className="container-list">
         <li className="container-list__icon">
-          <NavLink
-            className={`icon ${
-              pathname === "/home" ? "container-list__active" : ""
-            }`}
-            to={"/home"}
-          >
+          <NavLink to={"/home"}>
             <img
+              className={`icon ${
+                pathname === "/home" ? "container-list__active" : "icon"
+              }`}
               src="/images/vector-home.svg"
               alt="Home icon"
               width="48"
@@ -25,9 +23,9 @@ const Navigation = (): React.ReactElement => {
         <li className="container-list__icon">
           <NavLink
             className={`icon ${
-              pathname === "" ? "container-list__active" : ""
+              pathname === "/home" ? "container-list__active" : ""
             }`}
-            to={""}
+            to={"/home"}
           >
             <img
               src="/images/vector-add.svg"
