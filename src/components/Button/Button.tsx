@@ -2,20 +2,20 @@ import { PropsWithChildren } from "react";
 import ButtonStyled from "./ButtonStyled";
 
 interface ButtonProps extends PropsWithChildren {
-  actionOnTap: () => void;
+  onClick: () => void;
   disabled: boolean;
   text: string;
 }
 
 const Button = ({
-  actionOnTap,
+  onClick: actionOnClick,
   disabled,
   text,
 }: ButtonProps): React.ReactElement => {
   return (
     <ButtonStyled
       className="button"
-      onTouchEnd={actionOnTap}
+      onClick={actionOnClick}
       disabled={disabled}
     >
       {text}
