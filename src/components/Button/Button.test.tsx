@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import Button from "./Button";
 import { ThemeProvider } from "styled-components";
 import mainTheme from "../../styles/mainTheme";
@@ -37,6 +37,24 @@ describe("Given a Button component", () => {
       const button = screen.getByRole("button");
 
       expect(button).toBeDisabled();
+    });
+  });
+
+  describe("When it receives an 'onClick' handler", () => {
+    test("Then it should call the 'onClick' function when clicked", () => {
+      render(
+        <ThemeProvider theme={mainTheme}>
+          <BrowserRouter>
+            <Button onClick={actionOnClick} disabled={false} text={text} />
+          </BrowserRouter>
+        </ThemeProvider>,
+      );
+
+      const button = screen.getByRole("button", { name: text });
+
+      fireEvent.click(button);
+
+      expect(actionOnClick).toHaveBeenCalledTimes(1);
     });
   });
 });
