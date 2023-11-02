@@ -13,7 +13,13 @@ describe("Given a Button component", () => {
       render(
         <ThemeProvider theme={mainTheme}>
           <BrowserRouter>
-            <Button onClick={actionOnClick} disabled={false} text={text} />
+            <Button
+              onClick={actionOnClick}
+              disabled={false}
+              text={text}
+              type="submit"
+              classModifier=""
+            />
           </BrowserRouter>
         </ThemeProvider>,
       );
@@ -29,7 +35,13 @@ describe("Given a Button component", () => {
       render(
         <ThemeProvider theme={mainTheme}>
           <BrowserRouter>
-            <Button onClick={actionOnClick} disabled={true} text="Modify" />
+            <Button
+              onClick={actionOnClick}
+              disabled={true}
+              text="Modify"
+              type="submit"
+              classModifier=""
+            />
           </BrowserRouter>
         </ThemeProvider>,
       );
@@ -45,7 +57,13 @@ describe("Given a Button component", () => {
       render(
         <ThemeProvider theme={mainTheme}>
           <BrowserRouter>
-            <Button onClick={actionOnClick} disabled={false} text={text} />
+            <Button
+              onClick={actionOnClick}
+              disabled={false}
+              text={text}
+              type="submit"
+              classModifier=""
+            />
           </BrowserRouter>
         </ThemeProvider>,
       );
