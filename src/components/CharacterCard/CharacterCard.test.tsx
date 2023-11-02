@@ -1,5 +1,5 @@
 import { ThemeProvider } from "styled-components";
-import { BrowserRouter } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 import { render, screen } from "@testing-library/react";
 import mainTheme from "../../styles/mainTheme";
 import CharacterCard from "./CharacterCard";
@@ -12,9 +12,9 @@ describe("Given the component CharacterCard", () => {
 
       render(
         <ThemeProvider theme={mainTheme}>
-          <BrowserRouter>
+          <MemoryRouter>
             <CharacterCard character={saulName} />
-          </BrowserRouter>
+          </MemoryRouter>
         </ThemeProvider>,
       );
 
@@ -32,9 +32,9 @@ describe("Given the component CharacterCard", () => {
 
       render(
         <ThemeProvider theme={mainTheme}>
-          <BrowserRouter>
+          <MemoryRouter>
             <CharacterCard character={expectedAlt} />
-          </BrowserRouter>
+          </MemoryRouter>
         </ThemeProvider>,
       );
 

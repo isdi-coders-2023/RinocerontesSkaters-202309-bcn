@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 import { render, screen } from "@testing-library/react";
 import Button from "./Button";
 import { ThemeProvider } from "styled-components";
@@ -12,9 +12,9 @@ describe("Given a Button component", () => {
     test("Then it should show a button with 'Modify' inside", async () => {
       render(
         <ThemeProvider theme={mainTheme}>
-          <BrowserRouter>
+          <MemoryRouter>
             <Button actionOnTap={actionOnTap} disabled={false} text={text} />
-          </BrowserRouter>
+          </MemoryRouter>
         </ThemeProvider>,
       );
 
@@ -28,9 +28,9 @@ describe("Given a Button component", () => {
     test("Then it should render a disabled button", () => {
       render(
         <ThemeProvider theme={mainTheme}>
-          <BrowserRouter>
+          <MemoryRouter>
             <Button actionOnTap={actionOnTap} disabled={true} text="Modify" />
-          </BrowserRouter>
+          </MemoryRouter>
         </ThemeProvider>,
       );
 
