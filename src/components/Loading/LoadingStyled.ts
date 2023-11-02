@@ -11,13 +11,17 @@ const LoadingStyled = styled.div`
   align-items: center;
   z-index: 1;
 
+  .loading-icon-container {
+    position: relative;
+  }
+
   .gavel {
     width: 312px;
     border-radius: 50%;
     border: 13px solid #000;
 
     &__text {
-      inset: 396px 0px 0px 326px;
+      inset: 187px 0px 0px 72px;
       color: black;
       position: absolute;
       font-size: 40px;

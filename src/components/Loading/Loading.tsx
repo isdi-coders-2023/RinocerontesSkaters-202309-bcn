@@ -5,6 +5,8 @@ const Loading = (): React.ReactElement => {
     <LoadingStyled>
       <div className="loading-icon-container">
         <img
+          width={"200px"}
+          height={"300px"}
           className="gavel"
           src="../../../public/images/gavel.gif"
           alt="gavel-gif"
