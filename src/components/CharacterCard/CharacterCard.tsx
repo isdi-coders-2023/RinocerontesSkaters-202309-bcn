@@ -14,7 +14,7 @@ const CharacterCard = ({
         <img
           className="card__image"
           src={image}
-          alt={name}
+          alt={`Character ${name} portrait`}
           width="300"
           height="470"
         />
