@@ -35,3 +35,7 @@ describe("Given a Navigation component", () => {
     );
 
     const navigationAltText = screen.getByAltText(expectedAltText);
+
+    expect(navigationAltText).toBeInTheDocument();
+  });
+});
