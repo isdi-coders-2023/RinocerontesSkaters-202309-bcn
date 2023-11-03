@@ -10,15 +10,15 @@ const CharacterCard = ({
 }: CharacterProps): React.ReactElement => {
   return (
     <CharacterCardStyled>
-      <div className="card">
+      <div className="character-card">
         <img
-          className="card__image"
+          className="character-card__image"
           src={image}
           alt={name}
           width="300"
           height="470"
         />
-        <h2 className="card__title">{name}</h2>
+        <h2 className="character-card__title">{name}</h2>
       </div>
     </CharacterCardStyled>
   );

@@ -9,7 +9,7 @@ const StyledHomePage = styled.section`
     padding: 20px 0 25px 0;
     color: ${({ theme }) => theme.colors.light};
     text-overflow: ellipsis;
-    overflow: overlay;
+    overflow: hidden;
   }
 `;
 

@@ -17,7 +17,7 @@ const CharacterList = () => {
   return (
     <CharacterListStyled title="character-list">
       {characters.map((character) => (
-        <li className="character-card-container" key={character.id}>
+        <li className="character-list__item" key={character.id}>
           <CharacterCard character={character} />
         </li>
       ))}

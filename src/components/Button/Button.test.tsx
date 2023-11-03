@@ -30,7 +30,7 @@ describe("Given a Button component", () => {
     });
   });
 
-  describe("When it receives a 'disabled' button prop", () => {
+  describe("When it receives a 'disabled' button prop with a value of true", () => {
     test("Then it should render a disabled button", () => {
       render(
         <ThemeProvider theme={mainTheme}>
