@@ -1,7 +1,7 @@
 import { http, HttpResponse } from "msw";
 
 export const handlers = [
-  http.get("https://better-call-lau.onrender.com/characters", () => {
+  http.get("https://better-call-lau.onrender.com/characters/", () => {
     return HttpResponse.json([
       {
         id: 1,
@@ -38,25 +38,6 @@ export const handlers = [
         nickname: "Pop Pop",
         portrayed: "Jonathan Banks",
       },
-      {
-        id: 3,
-        hash: "6367d781359b4d0aa083c84b",
-        name: "Kim Wexler",
-        birthday: "February 13, 1968",
-        occupation: [
-          "Law student at University of New Mexico (former)",
-          "Mailroom clerk at Hamlin, Hamlin & McGill (former)",
-          "Associate at HHM (former)",
-        ],
-        img: "\nhttps://static.wikia.nocookie.net/breakingbad/images/c/c6/BCS_S6_Portrait_Kim.jpg/revision/latest?cb=20220522174923",
-        status: "Alive",
-        appearance: [1, 2, 3, 4, 5, 6],
-        firstAppearance: "Uno",
-        lastAppearance: "Saul Gone",
-        portrayed: "Rhea Seehorn",
-      },
     ]);
   }),
 ];
-
-export default handlers;
