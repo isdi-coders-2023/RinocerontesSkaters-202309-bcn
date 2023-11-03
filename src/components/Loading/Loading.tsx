@@ -8,7 +8,7 @@ const Loading = (): React.ReactElement => {
           width={"200px"}
           height={"300px"}
           className="gavel"
-          src="../../../public/images/gavel.gif"
+          src="../../../public/images/gavel-image.jpg"
           alt="Gavel hitting the sound block."
         />
         <span className="gavel__text">Loading</span>
