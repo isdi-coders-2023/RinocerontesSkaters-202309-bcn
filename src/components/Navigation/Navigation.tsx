@@ -1,17 +1,33 @@
 import { NavLink } from "react-router-dom";
 import NavigationStyled from "./NavigationStyled";
 
-const Navigation = (): React.ReactElement => {
+const getClassName = ({
+  isActive,
+  isPending,
+}: {
+  isActive: boolean;
+  isPending: boolean;
+}): string => {
+  if (isActive) {
+    return "active";
+  } else if (isPending) {
+    return "pending";
+  } else {
+    return "";
+  }
+};
+
+const Navigation = (): JSX.Element => {
+  const isActive = true; // Replace with your actual logic
+  const isPending = false; // Replace with your actual logic
+
+  const linkClassName = getClassName({ isActive, isPending });
+
   return (
     <NavigationStyled>
       <ul className="container-list">
         <li className="container-list__icon">
-          <NavLink
-            to="/home"
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "active" : ""
-            }
-          >
+          <NavLink to="/create" className={linkClassName}>
             <img
               className="icon"
               src="/images/vector-home.svg"
@@ -22,12 +38,7 @@ const Navigation = (): React.ReactElement => {
           </NavLink>
         </li>
         <li className="container-list__icon">
-          <NavLink
-            to="/create"
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "active" : ""
-            }
-          >
+          <NavLink to="/create" className={linkClassName}>
             <img
               className="icon"
               src="/images/vector-add.svg"
