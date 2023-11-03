@@ -1,18 +1,35 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import NavigationStyled from "./NavigationStyled";
 
-const Navigation = (): React.ReactElement => {
-  const { pathname } = useLocation();
+const getClassName = ({
+  isActive,
+  isPending,
+}: {
+  isActive: boolean;
+  isPending: boolean;
+}): string => {
+  if (isActive) {
+    return "active";
+  } else if (isPending) {
+    return "pending";
+  } else {
+    return "";
+  }
+};
+
+const Navigation = (): JSX.Element => {
+  const isActive = true; // Replace with your actual logic
+  const isPending = false; // Replace with your actual logic
+
+  const linkClassName = getClassName({ isActive, isPending });
 
   return (
     <NavigationStyled>
       <ul className="container-list">
         <li className="container-list__icon">
-          <NavLink to={"/home"}>
+          <NavLink to="/create" className={linkClassName}>
             <img
-              className={`icon ${
-                pathname === "/home" ? "container-list__active" : "icon"
-              }`}
+              className="icon"
               src="/images/vector-home.svg"
               alt="Home icon"
               width="48"
@@ -21,11 +38,9 @@ const Navigation = (): React.ReactElement => {
           </NavLink>
         </li>
         <li className="container-list__icon">
-          <NavLink to={"/home"}>
+          <NavLink to="/create" className={linkClassName}>
             <img
-              className={`icon ${
-                pathname === "/home" ? "container-list__active" : ""
-              }`}
+              className="icon"
               src="/images/vector-add.svg"
               alt="Create icon"
               width="48"

@@ -19,4 +19,3 @@ export const characterMock: CharacterStructure = {
   portrayed: "Bob Odenkirk",
 };
 
-export default characterMock;

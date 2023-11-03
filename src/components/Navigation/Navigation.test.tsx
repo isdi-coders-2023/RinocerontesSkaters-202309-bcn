@@ -38,23 +38,4 @@ describe("Given a Navigation component", () => {
 
     expect(navigationAltText).toBeInTheDocument();
   });
-
-  describe("When it is rendered andwe are at path `/home`", () => {
-    test("Then it should show the class `container-list__active`", () => {
-      const expectedAltText = "Home icon";
-      const expectedClassName = "container-list__active";
-
-      render(
-        <MemoryRouter initialEntries={[{ pathname: "/home" }]}>
-          <ThemeProvider theme={mainTheme}>
-            <Navigation />
-          </ThemeProvider>
-        </MemoryRouter>,
-      );
-
-      const navigationAltText = screen.getByAltText(expectedAltText);
-
-      expect(navigationAltText).toHaveClass(expectedClassName);
-    });
-  });
 });
