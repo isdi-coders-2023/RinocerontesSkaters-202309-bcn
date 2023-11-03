@@ -1,6 +1,6 @@
 import CharacterStructure from "../features/characters/types";
 
-export const characters: CharacterStructure[] = [
+export const charactersMock: CharacterStructure[] = [
   {
     id: 1,
     hash: "6367c33e64f544038d8d9582",
@@ -11,7 +11,7 @@ export const characters: CharacterStructure[] = [
       "Public Defense Attorney",
     ],
     image:
-      "https://cdn.discordapp.com/attachments/1162111119914188901/1169626363280498718/BCS_S6_Portrait_Jimmy.webp?ex=6556166f&is=6543a16f&hm=0318acdbe7203102162223d4c331645a2b4c27c9b1a6baf5ac8a420e172f721c&",
+      "https://cdn.discordapp.com/attachments/1167550007080124416/1169756570415026306/BCS_S6_Portrait_Jimmy.webp?ex=65568fb3&is=65441ab3&hm=1f8bd3baffd24308ca47e619c956a08d3f0a91aabbd8419c3d0a1adcf3e6648c&",
     status: "Alive",
     appearance: [1, 2, 3, 4, 5, 6],
     firstAppearance: "Uno",
@@ -30,7 +30,7 @@ export const characters: CharacterStructure[] = [
       "Ticket Booth Guard",
     ],
     image:
-      "https://cdn.discordapp.com/attachments/1162111119914188901/1169626569715757137/BCS_S6_Portrait_Mike_1.webp?ex=655616a0&is=6543a1a0&hm=c6053ce891143a99d97c1bcca168804a7d045372c05fddfe7a0fb2607370943d&",
+      "https://cdn.discordapp.com/attachments/1167550007080124416/1169756636265578616/BCS_S6_Portrait_Mike.webp?ex=65568fc3&is=65441ac3&hm=aac72ff8dfc391b480f16954bcb250105f89c5d1c2fa8cc8c6a28e186b494e8e&",
     status: "Deceased",
     appearance: [1, 2, 3, 4, 5, 6],
     firstAppearance: "Uno",
@@ -39,3 +39,5 @@ export const characters: CharacterStructure[] = [
     portrayed: "Jonathan Banks",
   },
 ];
+
+export default charactersMock;

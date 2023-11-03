@@ -18,3 +18,4 @@ export const characterMock: CharacterStructure = {
   nickname: "Saul Goodman",
   portrayed: "Bob Odenkirk",
 };
+
