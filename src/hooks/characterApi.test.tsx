@@ -1,4 +1,5 @@
 import useCharactersApi from "./characterApi";
+import { renderHook } from "@testing-library/react";
 
 describe("Given a custom hook that intercepts GET requests", () => {
   describe("When it recieves the request of the url ''", () => {
@@ -58,9 +59,9 @@ describe("Given a custom hook that intercepts GET requests", () => {
         },
       ];
 
-      const { getCharacters } = useCharactersApi();
+      const { result } = renderHook(() => useCharactersApi());
 
-      const currentCharacters = await getCharacters();
+      const currentCharacters = await result.current.getCharacters();
 
       expect(currentCharacters).toStrictEqual(expectedArray);
     });
