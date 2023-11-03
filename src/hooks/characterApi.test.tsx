@@ -14,7 +14,8 @@ describe("Given a custom hook that intercepts GET requests", () => {
             "Mailroom clerk at Hamlin, Hamlin & McGill",
             "Public Defense Attorney",
           ],
-          img: "https://static.wikia.nocookie.net/breakingbad/images/8/8e/BCS_S6_Portrait_Jimmy.jpg/revision/latest?cb=20220802210840",
+          image:
+            "https://cdn.discordapp.com/attachments/1167550007080124416/1169756570415026306/BCS_S6_Portrait_Jimmy.webp?ex=65568fb3&is=65441ab3&hm=1f8bd3baffd24308ca47e619c956a08d3f0a91aabbd8419c3d0a1adcf3e6648c&",
           status: "Alive",
           appearance: [1, 2, 3, 4, 5, 6],
           firstAppearance: "Uno",
@@ -32,7 +33,8 @@ describe("Given a custom hook that intercepts GET requests", () => {
             "Private Investigator",
             "Ticket Booth Guard",
           ],
-          img: "https://static.wikia.nocookie.net/breakingbad/images/4/46/BCS_S6_Portrait_Mike.jpg/revision/latest?cb=20220522174959",
+          image:
+            "https://cdn.discordapp.com/attachments/1167550007080124416/1169756636265578616/BCS_S6_Portrait_Mike.webp?ex=65568fc3&is=65441ac3&hm=aac72ff8dfc391b480f16954bcb250105f89c5d1c2fa8cc8c6a28e186b494e8e&",
           status: "Deceased",
           appearance: [1, 2, 3, 4, 5, 6],
           firstAppearance: "Uno",
@@ -40,28 +42,15 @@ describe("Given a custom hook that intercepts GET requests", () => {
           nickname: "Pop Pop",
           portrayed: "Jonathan Banks",
         },
-        {
-          id: 3,
-          hash: "6367d781359b4d0aa083c84b",
-          name: "Kim Wexler",
-          birthday: "February 13, 1968",
-          occupation: [
-            "Law student at University of New Mexico (former)",
-            "Mailroom clerk at Hamlin, Hamlin & McGill (former)",
-            "Associate at HHM (former)",
-          ],
-          img: "\nhttps://static.wikia.nocookie.net/breakingbad/images/c/c6/BCS_S6_Portrait_Kim.jpg/revision/latest?cb=20220522174923",
-          status: "Alive",
-          appearance: [1, 2, 3, 4, 5, 6],
-          firstAppearance: "Uno",
-          lastAppearance: "Saul Gone",
-          portrayed: "Rhea Seehorn",
-        },
       ];
 
-      const { result } = renderHook(() => useCharactersApi());
+      const {
+        result: {
+          current: { getCharacters },
+        },
+      } = renderHook(() => useCharactersApi());
 
-      const currentCharacters = await result.current.getCharacters();
+      const currentCharacters = await getCharacters();
 
       expect(currentCharacters).toStrictEqual(expectedArray);
     });
