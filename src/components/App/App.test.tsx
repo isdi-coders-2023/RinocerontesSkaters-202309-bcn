@@ -4,6 +4,7 @@ import { render, screen } from "@testing-library/react";
 import { ThemeProvider } from "styled-components";
 import mainTheme from "../../styles/mainTheme";
 import CharactersProviderWrapper from "../../features/characters/store/CharactersProviderWrapper";
+import UiContextWrapper from "../../features/ui/store/UiContextWrapper";
 
 describe("Given the App component", () => {
   describe("When it renders on screen ", () => {
@@ -11,13 +12,15 @@ describe("Given the App component", () => {
       const expectedText = "Logo of Better call Lau";
 
       render(
-        <ThemeProvider theme={mainTheme}>
-          <CharactersProviderWrapper>
-            <MemoryRouter>
-              <App />
-            </MemoryRouter>
-          </CharactersProviderWrapper>
-        </ThemeProvider>,
+        <UiContextWrapper>
+          <ThemeProvider theme={mainTheme}>
+            <CharactersProviderWrapper>
+              <MemoryRouter>
+                <App />
+              </MemoryRouter>
+            </CharactersProviderWrapper>
+          </ThemeProvider>
+        </UiContextWrapper>,
       );
 
       const headerLogoAccesibility = screen.getByAltText(expectedText);
