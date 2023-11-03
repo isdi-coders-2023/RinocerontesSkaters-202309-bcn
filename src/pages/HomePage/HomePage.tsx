@@ -4,7 +4,7 @@ import StyledHomePage from "./HomePageStyled";
 const HomePage = () => {
   return (
     <StyledHomePage>
-      <h1 className="character-title">Characters</h1>
+      <h1 className="character-list-title">Characters</h1>
       <CharacterList />
     </StyledHomePage>
   );

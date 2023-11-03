@@ -1,6 +1,6 @@
 import CharacterStructure from "../features/characters/types";
 
-export const character: CharacterStructure = {
+export const characterMock: CharacterStructure = {
   id: 1,
   hash: "6367c33e64f544038d8d9582",
   name: "Jimmy McGill",
@@ -18,3 +18,5 @@ export const character: CharacterStructure = {
   nickname: "Saul Goodman",
   portrayed: "Bob Odenkirk",
 };
+
+export default characterMock;

@@ -4,6 +4,7 @@ import mainTheme from "../../styles/mainTheme";
 import { ThemeProvider } from "styled-components";
 import { MemoryRouter } from "react-router-dom";
 import CharacterList from "./CharacterList";
+import UiContextWrapper from "../../features/ui/store/UiContextWrapper";
 
 describe("Given a CharacterList", () => {
   describe("When it is called with a list of 2 characters", () => {
@@ -11,13 +12,15 @@ describe("Given a CharacterList", () => {
       const expectedTitle = "character-list";
 
       render(
-        <ThemeProvider theme={mainTheme}>
-          <CharactersProviderWrapper>
-            <MemoryRouter>
-              <CharacterList />
-            </MemoryRouter>
-          </CharactersProviderWrapper>
-        </ThemeProvider>,
+        <UiContextWrapper>
+          <ThemeProvider theme={mainTheme}>
+            <CharactersProviderWrapper>
+              <MemoryRouter>
+                <CharacterList />
+              </MemoryRouter>
+            </CharactersProviderWrapper>
+          </ThemeProvider>
+        </UiContextWrapper>,
       );
 
       const characterList = screen.getByTitle(expectedTitle);

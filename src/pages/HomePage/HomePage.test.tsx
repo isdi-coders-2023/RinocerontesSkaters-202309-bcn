@@ -4,6 +4,7 @@ import HomePage from "./HomePage";
 import { ThemeProvider } from "styled-components";
 import mainTheme from "../../styles/mainTheme";
 import CharactersProviderWrapper from "../../features/characters/store/CharactersProviderWrapper";
+import UiContextWrapper from "../../features/ui/store/UiContextWrapper";
 
 describe("Given a Home page", () => {
   describe("When it is rendered", () => {
@@ -11,11 +12,13 @@ describe("Given a Home page", () => {
       const headingText = "Characters";
 
       render(
-        <CharactersProviderWrapper>
-          <ThemeProvider theme={mainTheme}>
-            <HomePage />
-          </ThemeProvider>
-        </CharactersProviderWrapper>,
+        <UiContextWrapper>
+          <CharactersProviderWrapper>
+            <ThemeProvider theme={mainTheme}>
+              <HomePage />
+            </ThemeProvider>
+          </CharactersProviderWrapper>
+        </UiContextWrapper>,
       );
 
       const heading = screen.getByRole("heading", {
