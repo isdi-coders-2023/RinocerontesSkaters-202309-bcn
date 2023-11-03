@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import CharactersContext from "../../features/characters/store/CharactersContext";
-import useCharactersApi from "../../hooks/characterApi";
+import useCharactersApi from "../../hooks/useCharacterApi";
 import CharacterCard from "../CharacterCard/CharacterCard";
 import CharacterListStyled from "./CharacterListStyled";
 

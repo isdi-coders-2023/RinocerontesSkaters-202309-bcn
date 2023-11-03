@@ -1,4 +1,4 @@
-import useCharactersApi from "./characterApi";
+import useCharactersApi from "./useCharacterApi";
 import { renderHook } from "@testing-library/react";
 import charactersMock from "../mocks/charactersMock";
 
