@@ -1,7 +1,7 @@
 import { http, HttpResponse } from "msw";
 
 export const handlers = [
-  http.get("https://better-call-lau.onrender.com/characters", () => {
+  http.get(import.meta.env.VITE_API_URL, () => {
     return HttpResponse.json([
       {
         id: 1,
