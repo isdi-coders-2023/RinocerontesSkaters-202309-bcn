@@ -21,13 +21,11 @@ const Navigation = (): React.ReactElement => {
           </NavLink>
         </li>
         <li className="container-list__icon">
-          <NavLink
-            className={`icon ${
-              pathname === "/home" ? "container-list__active" : ""
-            }`}
-            to={"/home"}
-          >
+          <NavLink to={"/home"}>
             <img
+              className={`icon ${
+                pathname === "/home" ? "container-list__active" : ""
+              }`}
               src="/images/vector-add.svg"
               alt="Create icon"
               width="48"
