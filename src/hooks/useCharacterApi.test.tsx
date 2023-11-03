@@ -1,6 +1,7 @@
 import useCharactersApi from "./useCharacterApi";
 import { renderHook } from "@testing-library/react";
 import charactersMock from "../mocks/charactersMock";
+import UiContextWrapper from "../features/ui/store/UiContextWrapper";
 
 describe("Given a custom hook that intercepts GET requests", () => {
   describe("When it recieves the request of the url ''", () => {
@@ -11,7 +12,7 @@ describe("Given a custom hook that intercepts GET requests", () => {
         result: {
           current: { getCharacters },
         },
-      } = renderHook(() => useCharactersApi());
+      } = renderHook(() => useCharactersApi(), { wrapper: UiContextWrapper });
 
       const currentCharacters = await getCharacters();
 
