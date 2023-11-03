@@ -12,8 +12,11 @@ const CharacterCardStyled = styled.article`
   width: 340px;
   height: 550px;
   border-radius: 60px;
+  max-width: 340px;
+  min-width: 180px;
+  border-radius: 60px;
 
-  .card {
+  .character-card {
     display: flex;
     justify-content: center;
     height: 500px;
@@ -36,7 +39,7 @@ const CharacterCardStyled = styled.article`
       position: absolute;
       top: 300px;
       background-color: ${({ theme }) => theme.colors.shadow};
-      //box-shadow: 1px 1px 3px 2px ${({ theme }) => theme.colors.shadow};
+      overflow: hidden;
     }
   }
 `;
