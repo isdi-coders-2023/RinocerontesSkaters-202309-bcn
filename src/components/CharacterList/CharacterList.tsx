@@ -1,17 +1,20 @@
-import CharactersContext from "../../features/characters/store/CharactersContext";
 import { useContext, useEffect } from "react";
-import { characters } from "../../data/characters";
+import CharactersContext from "../../features/characters/store/CharactersContext";
+import useCharactersApi from "../../hooks/characterApi";
 import CharacterCard from "../CharacterCard/CharacterCard";
 
 const CharacterList = () => {
-  const { loadCharacters } = useContext(CharactersContext);
+  const { characters, loadCharacters } = useContext(CharactersContext);
+  const { getCharacters } = useCharactersApi();
 
   useEffect(() => {
-    loadCharacters(characters);
-  }, [loadCharacters]);
+    (async () => {
+      loadCharacters(await getCharacters());
+    })();
+  }, [loadCharacters, getCharacters]);
 
   return (
-    <ul className="character-list">
+    <ul className="character-list" title="character-list">
       {characters.map((character) => (
         <li className="character-card-container" key={character.id}>
           <CharacterCard character={character} />
