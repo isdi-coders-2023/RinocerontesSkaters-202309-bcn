@@ -13,9 +13,12 @@ declare module "styled-components" {
       sky: string;
       dark: string;
       lightGrey: string;
+      lighterGrey: string;
       darkGrey: string;
       yellow: string;
       shadow: string;
+      darkShadow: string;
+      darkStrong: string;
     };
 
     typography: {

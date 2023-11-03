@@ -14,9 +14,12 @@ const mainTheme: DefaultTheme = {
     sky: "#58c4f6",
     dark: "#100f0f",
     lightGrey: "#d9d9d9",
+    lighterGrey: "#0000003f",
     darkGrey: "#bababa",
     yellow: "#fef698",
     shadow: "#0000004f",
+    darkShadow: "#000000cc",
+    darkStrong: "#000",
   },
   typography: {
     main: "'Playfair Display', sans-serif",
