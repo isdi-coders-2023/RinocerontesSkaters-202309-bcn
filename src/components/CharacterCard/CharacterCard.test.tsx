@@ -3,12 +3,12 @@ import { MemoryRouter } from "react-router-dom";
 import { render, screen } from "@testing-library/react";
 import mainTheme from "../../styles/mainTheme";
 import CharacterCard from "./CharacterCard";
-import { character } from "../../data/character";
+import characterMock from "../../mocks/characterMock";
 
 describe("Given the component CharacterCard", () => {
   describe("When it received a character name", () => {
     test("Then it should show the name of the character: Jimmy Mccgill", () => {
-      const saulName = character;
+      const saulName = characterMock;
 
       render(
         <ThemeProvider theme={mainTheme}>
@@ -28,7 +28,7 @@ describe("Given the component CharacterCard", () => {
 
   describe("When it received a character image", () => {
     test("Then it should show an image with an alternative text: the name of the character", () => {
-      const expectedAlt = character;
+      const expectedAlt = characterMock;
 
       render(
         <ThemeProvider theme={mainTheme}>
